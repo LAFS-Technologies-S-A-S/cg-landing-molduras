@@ -235,8 +235,7 @@
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
             <!-- <img src="banner_1.png" alt="Elegant interior with moldings" class="w-full h-full object-cover opacity-30"> -->
-            <video src="output_ffff.mp4" autoplay muted class="w-full h-full object-cover opacity-30"
-                controls="false"></video>
+            <video src="output_ffff.mp4" autoplay muted class="w-full h-full object-cover opacity-30"></video>
             <div class="absolute inset-0 bg-gradient-to-b from-transparent via-bone/50 to-bone"></div>
         </div>
 
@@ -278,23 +277,45 @@
     </section>
 
     <section class="py-20 px-4 bg-bone">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div>
-                <h2 class="text-3xl md:text-5xl font-bold text-matte-black mb-6">
-                    ¿Paredes vacías sin personalidad?
-                </h2>
-                <p class="text-lg text-charcoal/80 mb-4">
-                    Muchas veces el espacio está bien amoblado, pero las paredes se ven planas, frías o incompletas.
-                </p>
-                <p class="text-lg text-charcoal/80 mb-6">
-                    Remodelar es costoso, genera polvo y toma tiempo.
-                </p>
-                <p class="text-lg font-semibold text-matte-black">
-                    Nuestras molduras transforman cualquier pared en horas, sin obra ni complicaciones.
-                </p>
-            </div>
-            <div>
-                <img src="before.webp" alt="Pared sin molduras" class="rounded-lg shadow-xl">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-matte-black mb-12 -mt-4 ">
+                ¿Paredes vacías sin personalidad?
+            </h2>
+            <div class="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl">
+                <!-- Imagen de fondo -->
+                <img src="before.webp" alt="Pared sin molduras" class="w-full h-full object-cover">
+
+                <!-- Overlay sutil para mejor contraste -->
+                <div class="absolute inset-0 bg-black/5"></div>
+
+                <!-- Mensajes flotantes -->
+                <div class="absolute top-12 left-8 md:left-16 max-w-xs md:max-w-md animate-fadeIn">
+                    <div
+                        class="bg-white p-4 md:p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+                        <p class="text-xl md:text-2xl font-bold text-matte-black">
+                            ¿No quieres polvo?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="absolute top-1/2 right-8 md:right-20 max-w-xs animate-fadeIn"
+                    style="animation-delay: 0.2s;">
+                    <div
+                        class="bg-white p-4 md:p-5 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+                        <p class="text-sm md:text-base font-bold text-matte-black">
+                            ¿Quieres un cambio elegante, sin remodelaciones costosas?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="absolute bottom-12 right-8 md:right-16 max-w-[200px] animate-fadeIn"
+                    style="animation-delay: 0.4s;">
+                    <div class="bg-white p-4 rounded-lg shadow-lg transform hover:scale-105 transition-transform">
+                        <p class="text-sm font-bold text-matte-black">
+                            ¿No quieres obra, ni procesos largos?
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -428,37 +449,6 @@
         </div>
     </section>
 
-
-
-    <section class="py-20 px-4 bg-white">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold text-matte-black mb-12 text-center">
-                ¿Cómo elegir la moldura ideal?
-            </h2>
-
-            <div class="grid md:grid-cols-3 gap-8 text-center">
-                <div class="p-6 border border-stone/20">
-                    <h3 class="font-semibold text-xl mb-2">Paredes pequeñas</h3>
-                    <p class="text-charcoal/70">Corredores y espacios compactos</p>
-                    <p class="font-semibold mt-2">0.90 – 1.30 m</p>
-                </div>
-
-                <div class="p-6 border border-stone/20">
-                    <h3 class="font-semibold text-xl mb-2">Espacios estándar</h3>
-                    <p class="text-charcoal/70">Salas, habitaciones y estudios</p>
-                    <p class="font-semibold mt-2">1.80 – 2.50 m</p>
-                </div>
-
-                <div class="p-6 border border-stone/20">
-                    <h3 class="font-semibold text-xl mb-2">Muros protagonistas</h3>
-                    <p class="text-charcoal/70">Paredes amplias y principales</p>
-                    <p class="font-semibold mt-2">3.50 – 4.50 m</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
     <!-- Products Grid Section -->
     <section id="productos" class="py-16 md:py-24 px-4">
         <div class="max-w-7xl mx-auto">
@@ -473,7 +463,7 @@
             </div>
 
             <!-- Products Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8 md:gap-10">
                 <!-- Product 5: Moldura 0.90-1.00m -->
                 <article class="product-card bg-white rounded-sm overflow-hidden shadow-lg opacity-0">
                     <div class="aspect-square overflow-hidden bg-stone/10">
@@ -513,42 +503,7 @@
                 </article>
 
                 <!-- Product 3: Moldura 1.80-2.00m -->
-                <article class="product-card bg-white rounded-sm overflow-hidden shadow-lg opacity-0">
-                    <div class="aspect-square overflow-hidden bg-stone/10">
-                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/genai_image_e36561b3331141cd8134264d0aee0f13_1767914539_00001-1-82b7af5eceac6ca01317684145478380-480-0.webp"
-                            alt="Moldura Pared 1.80-2.00m"
-                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
-                    </div>
-                    <div class="p-6 md:p-8">
-                        <h3 class="text-lg font-semibold text-matte-black mb-2 leading-tight">
-                            Moldura Pared 1.80 - 2.00 MT
-                        </h3>
-                        <p class="text-2xl font-bold text-stone mb-4">
-                            $331.500 COP
-                        </p>
-                        <p class="text-charcoal/70 mb-6 leading-relaxed text-sm">
-                            Transformación rápida y limpia sin obras. Acabado moderno y sofisticado que aporta carácter,
-                            profundidad y diseño atemporal.
-                        </p>
-                        <div class="flex gap-2">
-                            <a href="https://casaglamour.shop/productos/moldura-adatable-a-pared-de-1-80-y-2-00-hym38/"
-                                target="_blank" class="view-detail-button flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path
-                                        d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
-                                    <circle cx="12" cy="12" r="3" />
-                                </svg>
-                            </a>
-                            <a href="https://casaglamour.shop/productos/moldura-adatable-a-pared-de-1-80-y-2-00-hym38/"
-                                target="_blank"
-                                class="buy-button inline-block w-full text-center bg-charcoal text-bone px-6 py-3 font-medium uppercase tracking-wide hover:bg-matte-black transition-all duration-300">
-                                Comprar Ahora
-                            </a>
-                        </div>
-                    </div>
-                </article>
+
 
                 <!-- Product 4: Moldura 1.20-1.30m -->
                 <article class="product-card bg-white rounded-sm overflow-hidden shadow-lg opacity-0">
@@ -580,6 +535,43 @@
                                 </svg>
                             </a>
                             <a href="https://casaglamour.shop/productos/moldura-adaptable-pared-de-1-20-y-1-30-de-ancho-4y0ct/"
+                                target="_blank"
+                                class="buy-button inline-block w-full text-center bg-charcoal text-bone px-6 py-3 font-medium uppercase tracking-wide hover:bg-matte-black transition-all duration-300">
+                                Comprar Ahora
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card bg-white rounded-sm overflow-hidden shadow-lg opacity-0">
+                    <div class="aspect-square overflow-hidden bg-stone/10">
+                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/genai_image_e36561b3331141cd8134264d0aee0f13_1767914539_00001-1-82b7af5eceac6ca01317684145478380-480-0.webp"
+                            alt="Moldura Pared 1.80-2.00m"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-lg font-semibold text-matte-black mb-2 leading-tight">
+                            Moldura Pared 1.80 - 2.00 MT
+                        </h3>
+                        <p class="text-2xl font-bold text-stone mb-4">
+                            $331.500 COP
+                        </p>
+                        <p class="text-charcoal/70 mb-6 leading-relaxed text-sm">
+                            Transformación rápida y limpia sin obras. Acabado moderno y sofisticado que aporta carácter,
+                            profundidad y diseño atemporal.
+                        </p>
+                        <div class="flex gap-2">
+                            <a href="https://casaglamour.shop/productos/moldura-adatable-a-pared-de-1-80-y-2-00-hym38/"
+                                target="_blank" class="view-detail-button flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </a>
+                            <a href="https://casaglamour.shop/productos/moldura-adatable-a-pared-de-1-80-y-2-00-hym38/"
                                 target="_blank"
                                 class="buy-button inline-block w-full text-center bg-charcoal text-bone px-6 py-3 font-medium uppercase tracking-wide hover:bg-matte-black transition-all duration-300">
                                 Comprar Ahora
@@ -667,7 +659,7 @@
                 <!-- Product 1: Moldura 3.50-4.00m -->
                 <article class="product-card bg-white rounded-sm overflow-hidden shadow-lg opacity-0">
                     <div class="aspect-square overflow-hidden bg-stone/10">
-                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/wmremove-transformed-9c9801b63af23e35f117688745338902-1024-1024.png"
+                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/chatgpt-image-jan-20-2026-01_29_51-am-cd8cc6f857a1762e8617688906213588-640-0.webp"
                             alt="Molduras Pared 3.50-4.00m"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
@@ -743,7 +735,7 @@
                         Presenta y ajusta
                     </h3>
                     <p class="text-charcoal/70 leading-relaxed">
-                        Ubica la moldura en la pared, marca la posición ideal y realiza los ajustes necesarios.
+                        Ubica el plano impreso en la pared, marca la posición ideal y realiza los ajustes necesarios.
                     </p>
                 </div>
 
@@ -755,10 +747,11 @@
                         02
                     </div>
                     <h3 class="text-xl font-semibold text-matte-black mb-3">
-                        Fija con adhesivo
+                        Pega las piezas
                     </h3>
                     <p class="text-charcoal/70 leading-relaxed">
-                        Aplica el adhesivo recomendado y presiona firmemente para una fijación segura y duradera.
+                        Retira el protector de la cinta doble faz y presiona firmemente para una fijación segura y
+                        duradera.
                     </p>
                 </div>
 
@@ -773,7 +766,7 @@
                         Disfruta el cambio
                     </h3>
                     <p class="text-charcoal/70 leading-relaxed">
-                        Obtén un acabado profesional que eleva por completo el diseño del espacio.
+                        Completa la figura y obtén un acabado profesional que eleva por completo el diseño del espacio.
                     </p>
                 </div>
 
