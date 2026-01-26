@@ -1270,23 +1270,32 @@
             if (!productUrl) return;
 
             // Extraer el ID del producto de la URL
-            // Las URLs tienen formato: /productos/nombre-producto-ID/
             const urlParts = productUrl.split('/');
-            const productSlug = urlParts[urlParts.length - 2]; // Obtiene 'nombre-producto-ID'
+            const productSlug = urlParts[urlParts.length - 2] || urlParts[urlParts.length - 1];
 
-            // Mapeo de slugs a IDs de producto (basado en tus productos)
+            // Mapeo detallado de slugs a IDs de variante (add_to_cart)
             const productIds = {
-                'molduras-pared-de-3-50-y-4-00-mt-de-ancho-7p11e': '318483547',
-                'moldura-adaptable-pared-de-4-00-a-4-50-1vpce': '318483548',
-                'moldura-adatable-a-pared-de-1-80-y-2-00-hym38': '318483549',
-                'moldura-adaptable-pared-de-1-20-y-1-30-de-ancho-4y0ct': '318483550',
-                'moldura-adaptable-pared-de-90-cm-y-1-00-mt-de-ancho-yhesq': '318483551',
-                'moldura-adaptable-a-pared-de-2-30-y-2-50-de-ancho-m2ll4': '318483552'
+                'moldura-portobella-adaptable-pared-de-1-20-y-1-30-de-ancho-1b1pr': '317203588',
+                'moldura-eco-medida-de-78-x-78-lopca': '320334402',
+                'moldura-palazo-adaptable-pared-de-90-cm-y-1-00-mt-de-ancho-1sl49': '317235119',
+                'moldura-dante-1-80de-ancho-a-2-00-mt-de-ancho-x-2-40-altura-adaptable-1yjkq': '320321577',
+                'moldura-pryce-adatable-a-pared-de-1-80-y-2-00-gl721': '318417884',
+                'moldura-zafary-adaptable-a-pared-de-2-30-y-2-50-de-ancho-6ijd1': '317242500',
+                'moldura-vis-famy-pared-de-2-50-mt-de-ancho-a-3-00-mt-de-ancho-10x9e': '320345405',
+                'moldura-sinfonia-adaptable-pared-de-4-00-a-4-50-e5fa0': '318483547',
+                'moldura-dulcinea-3-00-mt-a-3-50-mt-de-ancho-uxp51': '320249011',
+                'molduras-joshua-pared-de-3-50-y-4-00-mt-de-ancho-2s12s': '318456269'
             };
 
-            const productId = productIds[productSlug] || '318483547'; // Default al primer producto
+            const productId = productIds[productSlug];
 
-            // Crear formulario para POST
+            if (!productId) {
+                // Si no hay ID mapeado, simplemente navegamos a la URL del producto
+                window.location.href = productUrl;
+                return;
+            }
+
+            // Crear formulario para POST (simula añadir al carrito e ir a comprar)
             const form = document.createElement('form');
             form.method = 'POST';
             form.action = 'https://casaglamour.shop/comprar/';
