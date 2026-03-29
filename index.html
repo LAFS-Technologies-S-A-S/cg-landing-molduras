@@ -9,10 +9,8 @@
     <meta name="keywords"
         content="molduras decorativas, molduras premium, decoración de interiores, molduras clásicas, molduras modernas">
     <title>Molduras Premium | Casa Glamour - Elegancia en cada detalle</title>
-
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-
     <!-- Google Fonts - Playfair Display (Serif) & Inter (Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,211 +22,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-    <style>
-        /* Custom Tailwind Configuration */
-        @tailwind base;
-        @tailwind components;
-        @tailwind utilities;
-
-        :root {
-            --color-bone: #F5F1E8;
-            --color-stone: #A39B8B;
-            --color-charcoal: #2C2C2C;
-            --color-matte-black: #1A1A1A;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--color-bone);
-            color: var(--color-charcoal);
-        }
-
-        h1,
-        h2,
-        h3 {
-            font-family: 'Playfair Display', serif;
-        }
-
-        /* Custom utilities */
-        .text-bone {
-            color: var(--color-bone);
-        }
-
-        .text-stone {
-            color: var(--color-stone);
-        }
-
-        .text-charcoal {
-            color: var(--color-charcoal);
-        }
-
-        .text-matte-black {
-            color: var(--color-matte-black);
-        }
-
-        .bg-bone {
-            background-color: var(--color-bone);
-        }
-
-        .bg-stone {
-            background-color: var(--color-stone);
-        }
-
-        .bg-charcoal {
-            background-color: var(--color-charcoal);
-        }
-
-        .bg-matte-black {
-            background-color: var(--color-matte-black);
-        }
-
-        /* Smooth scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Product card hover effect preparation */
-        .product-card {
-            transition: transform 0.3s ease;
-        }
-
-        .product-card:hover {
-            transform: translateY(-4px);
-        }
-
-        /* Button hover preparation for GSAP */
-        .cta-button {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-button::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: rgba(255, 255, 255, 0.1);
-            transition: left 0.3s ease;
-        }
-
-        .cta-button:hover::before {
-            left: 100%;
-        }
-
-        .view-detail-button {
-            background-color: #A39B8B;
-            color: #fff;
-            padding: 10px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-
-        .view-detail-button:hover {
-            background-color: #fff;
-            color: #A39B8B;
-        }
-
-        /* Before/After Image Comparison Slider */
-        .comparison-container {
-            position: relative;
-            overflow: hidden;
-            cursor: ew-resize;
-            user-select: none;
-            background-color: var(--color-bone);
-        }
-
-        .comparison-image {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            object-position: center;
-            pointer-events: none;
-        }
-
-        .comparison-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 50%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .comparison-overlay .comparison-image {
-            width: 100vw;
-            max-width: 1152px;
-            height: 100%;
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-        .comparison-slider {
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 4px;
-            height: 100%;
-            background: var(--color-matte-black);
-            transform: translateX(-50%);
-            cursor: ew-resize;
-            z-index: 10;
-        }
-
-        .comparison-slider::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            width: 48px;
-            height: 48px;
-            background: var(--color-matte-black);
-            border-radius: 50%;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-        }
-
-        .comparison-slider::after {
-            content: '⟷';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: var(--color-bone);
-            font-size: 24px;
-            font-weight: bold;
-            z-index: 1;
-        }
-
-        .comparison-label {
-            position: absolute;
-            top: 20px;
-            padding: 8px 16px;
-            background: rgba(0, 0, 0, 0.7);
-            color: white;
-            font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 4px;
-            z-index: 5;
-        }
-
-        .comparison-label.before {
-            left: 20px;
-        }
-
-        .comparison-label.after {
-            right: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="antialiased">
-
     <!-- Hero Section -->
     <section id="hero"
         class="min-h-screen flex items-center justify-center px-4 py-12 md:py-20 relative overflow-hidden">
@@ -321,8 +118,6 @@
         </div>
     </section>
 
-
-
     <!-- Before/After Comparison Section -->
     <section id="antes-despues" class="py-16 md:py-24 px-4 bg-gradient-to-b from-white to-bone">
         <div class="max-w-6xl mx-auto">
@@ -365,7 +160,6 @@
             </a>
         </div>
     </section>
-
 
     <!-- Benefits Section -->
     <section id="beneficios" class="py-16 md:py-20 px-4 bg-white">
@@ -470,7 +264,7 @@
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-10">
                 <article class="product-card bg-white rounded-sm overflow-hidden shadow-lg opacity-0">
                     <div class="aspect-square overflow-hidden bg-stone/10">
-                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/genai_image_82060b23279842299733f250e6d04f7e_1767904539_00001-8c5f3045ed4ee861d517679112095112-480-0.webp"
+                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/product_317203588_3-2a3f4ec7f66b85dc7117741181824073-1024-1024.webp"
                             alt="Moldura Portobella Adaptable 1.20 - 1.30 MT"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
@@ -503,7 +297,7 @@
                 </article>
                 <article class="product-card bg-white rounded-sm overflow-hidden shadow-lg opacity-0">
                     <div class="aspect-square overflow-hidden bg-stone/10">
-                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/gemini_generated_image_2acdw52acdw52acd-be8d5ed6134dd566d017691877854724-480-0.webp"
+                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/product_320334402_1-e7b42195b594166d2017741182829094-1024-1024.webp"
                             alt="Moldura Eco 78cm x 78cm"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
@@ -536,7 +330,39 @@
                 </article>
                 <article class="product-card bg-white rounded-sm overflow-hidden shadow-lg opacity-0">
                     <div class="aspect-square overflow-hidden bg-stone/10">
-                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/genai_image_7b2135b53d564b039344e581e60aedf1_1767921769_00001-878246e1b27d86b5d717679225659521-480-0.webp"
+                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/product_320926298_1-2eef25640cdaa88a0d17741183081956-1024-1024.webp"
+                            alt="MOLDURA FIORY  "
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="text-md md:text-lg font-semibold text-matte-black mb-2 leading-tight">
+                            MOLDURA FIORY
+                        </h3>
+                        <p class="text-sm md:text-2xl font-bold text-stone mb-4">
+                            $273.000 COP
+                        </p>
+
+                        <div class="flex flex-col md:flex-row gap-2">
+                            <a href="https://casaglamour.shop/productos/producto-de-prueba-1g5k6/" target="_blank"
+                                class="view-detail-button flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </a>
+                            <a href="https://casaglamour.shop/productos/producto-de-prueba-1g5k6/" target="_blank"
+                                class="buy-button text-sm md:text-base inline-block w-full text-center bg-charcoal text-bone px-6 py-3 font-medium uppercase tracking-wide hover:bg-matte-black transition-all duration-300">
+                                Comprar Ahora
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                <article class="product-card bg-white rounded-sm overflow-hidden shadow-lg opacity-0">
+                    <div class="aspect-square overflow-hidden bg-stone/10">
+                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/product_317235119_1-10aedf56c846b74adb17741181954450-1024-1024.webp"
                             alt="Moldura Palazo Adaptable 90cm - 1.00 MT"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
@@ -569,7 +395,7 @@
                 </article>
                 <article class="product-card bg-white rounded-sm overflow-hidden shadow-lg opacity-0">
                     <div class="aspect-square overflow-hidden bg-stone/10">
-                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/gemini_generated_image_hybiy1hybiy1hybi-03d060a1f4bc38c60917691489411225-480-0.webp"
+                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/product_320321577_2-508f9c0cc9b3e58c2517741182709177-1024-1024.webp"
                             alt="Moldura Dante Adaptable 1.80 - 2.00 MT"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
@@ -602,7 +428,7 @@
                 </article>
                 <article class="product-card bg-white rounded-sm overflow-hidden shadow-lg opacity-0">
                     <div class="aspect-square overflow-hidden bg-stone/10">
-                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/genai_image_e36561b3331141cd8134264d0aee0f13_1767914539_00001-1-82b7af5eceac6ca01317684145478380-480-0.webp"
+                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/genai_image_e36561b3331141cd8134264d0aee0f13_1767914539_00001-1-c4a8a60b5085eca1de17748073225929-1024-1024.webp"
                             alt="Moldura Pryce Adaptable 1.80 - 2.00 MT"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
@@ -668,7 +494,7 @@
                 </article>
                 <article class="product-card bg-white rounded-sm overflow-hidden shadow-lg opacity-0">
                     <div class="aspect-square overflow-hidden bg-stone/10">
-                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/gemini_generated_image_thnwtethnwtethnw-1-dbaf7148d3b6082baf17691896825103-480-0.webp"
+                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/product_320345405_4-2fe4889a6e9120cbb517741183033033-1024-1024.webp"
                             alt="Moldura Vis-Famy 2.50 - 3.00 MT"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
@@ -701,7 +527,7 @@
                 </article>
                 <article class="product-card bg-white rounded-sm overflow-hidden shadow-lg opacity-0">
                     <div class="aspect-square overflow-hidden bg-stone/10">
-                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/5tyjvnrnb5rmy0cvv8gsa05mnr-7cfb105d0d1ebc204c17688911957663-480-0.webp"
+                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/product_318483547_1-022546c532a2a2e99817741182449082-1024-1024.webp"
                             alt="Moldura Sinfonia Adaptable 4.00 - 4.50 MT"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
@@ -734,7 +560,7 @@
                 </article>
                 <article class="product-card bg-white rounded-sm overflow-hidden shadow-lg opacity-0">
                     <div class="aspect-square overflow-hidden bg-stone/10">
-                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/gemini_generated_image_sitv51sitv51sitv-397d82d8be7e4681c717691460721986-480-0.webp"
+                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/product_320249011_2-445b7cc8552000bd7217741182588236-1024-1024.webp"
                             alt="Moldura Dulcinea 3.00 - 3.50 MT"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
@@ -767,7 +593,7 @@
                 </article>
                 <article class="product-card bg-white rounded-sm overflow-hidden shadow-lg opacity-0">
                     <div class="aspect-square overflow-hidden bg-stone/10">
-                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/chatgpt-image-jan-20-2026-01_29_51-am-cd8cc6f857a1762e8617688906213588-480-0.webp"
+                        <img src="https://dcdn-us.mitiendanube.com/stores/006/600/945/products/product_318456269_1-6548f7e1325ff1aab017741182339600-1024-1024.webp"
                             alt="Molduras Joshua 3.50 - 4.00 MT"
                             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
                     </div>
@@ -880,7 +706,6 @@
         </div>
     </section>
 
-
     <section class="py-28 px-4 bg-gradient-to-b from-white to-bone">
         <div class="max-w-7xl mx-auto">
 
@@ -969,8 +794,6 @@
 
         </div>
     </section>
-
-
 
     <!-- CTA Banner Section -->
     <section class="pb-40 px-4 bg-gradient-to-br from-charcoal via-matte-black to-charcoal relative overflow-hidden">
@@ -1284,7 +1107,8 @@
                 'moldura-vis-famy-pared-de-2-50-mt-de-ancho-a-3-00-mt-de-ancho-10x9e': '320345405',
                 'moldura-sinfonia-adaptable-pared-de-4-00-a-4-50-e5fa0': '318483547',
                 'moldura-dulcinea-3-00-mt-a-3-50-mt-de-ancho-uxp51': '320249011',
-                'molduras-joshua-pared-de-3-50-y-4-00-mt-de-ancho-2s12s': '318456269'
+                'molduras-joshua-pared-de-3-50-y-4-00-mt-de-ancho-2s12s': '318456269',
+                'producto-de-prueba-1g5k6': '320926298',
             };
 
             const productId = productIds[productSlug];
@@ -1332,7 +1156,5 @@
             });
         });
     </script>
-
 </body>
-
 </html>
